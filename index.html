@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentiPulse | Twitter Sentiment Analysis</title>
+    <meta name="description" content="Advanced Twitter sentiment analysis powered by machine learning. Real-time classification with >95% accuracy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <div class="logo">
+                <span class="pulse-icon"></span>
+                <h1>Senti<span>Pulse</span></h1>
+            </div>
+            <p class="subtitle">Advanced Machine Learning for Twitter Sentiment Classification</p>
+        </header>
+
+        <section class="analysis-box card">
+            <div class="input-group">
+                <label for="tweetInput">Analyze a Tweet</label>
+                <div class="textarea-wrapper">
+                    <textarea id="tweetInput" placeholder="Type or paste a tweet here..." rows="4"></textarea>
+                    <div class="char-count"><span id="currentChar">0</span>/280</div>
+                </div>
+            </div>
+            
+            <button id="analyzeBtn" class="btn-primary">
+                <span class="btn-text">Analyze Sentiment</span>
+                <div class="loader hidden"></div>
+            </button>
+        </section>
+
+        <section id="resultSection" class="result-card card hidden">
+            <div class="result-header">
+                <h3>Analysis Result</h3>
+            </div>
+            
+            <div class="result-content">
+                <div class="sentiment-display">
+                    <div id="sentimentIcon" class="sentiment-icon"></div>
+                    <div class="sentiment-info">
+                        <h2 id="sentimentLabel">Positive</h2>
+                        <p id="sentimentDesc">We've detected a generally positive or neutral tone in this tweet.</p>
+                    </div>
+                </div>
+
+                <div class="confidence-meter">
+                    <div class="meter-label">
+                        <span>Confidence Level</span>
+                        <span id="confidenceValue">0%</span>
+                    </div>
+                    <div class="meter-bar">
+                        <div id="confidenceFill" class="meter-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cleaned-data">
+                <h4>Processed Data</h4>
+                <p id="cleanedTweet" class="code-snippet"></p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-item">
+                <div class="f-icon">🎯</div>
+                <h4>High Precision</h4>
+                <p>Achieving 95.5% accuracy on validated datasets.</p>
+            </div>
+            <div class="feature-item">
+                <div class="f-icon">⚡</div>
+                <h4>Real-time</h4>
+                <p>Instant classification using optimized ML models.</p>
+            </div>
+            <div class="feature-item">
+                <div class="f-icon">🛡️</div>
+                <h4>Toxic Detection</h4>
+                <p>Robust detection of hate speech and negative sentiment.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
